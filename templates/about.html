@@ -1,0 +1,239 @@
+{% extends 'base.html' %}
+
+{% block metatags %}
+<title>{% if seo_index.meta_title %}{{seo_index.meta_title}}{% else %}{{company.company_name}}{% endif %}</title>
+<meta name="description" content="{{ seo_index.meta_description }}">
+<meta name="keywords" content="{{ seo_index.meta_keywords }}">
+<link rel="canonical" href="{{ seo_index.canonical_tag }}">
+{% endblock metatags %}
+
+{% block style %}
+
+{% endblock style %}
+    
+{% block js %}
+
+{% endblock js %}
+
+{% block content %} 
+
+<section class="section-frame overflow-hidden">
+  <div class="wrapper bg-gray">
+    <div class="py-13  text-center">
+      <div class="row">
+        <div class="col-lg-10 col-xxl-8 mx-auto">
+          <h1 class="display-1 mb-4">We Build, We Design, We Deliver</h1>
+        <p class="lead fs-lg mb-0">passionate freelancers dedicated to delivering high-quality digital solutions. With expertise in web development and design, we work together to create seamless, efficient, and visually appealing projects.</p>
+
+        </div>
+        <!-- /column -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.wrapper -->
+</section>
+    <!-- /section -->
+    <section class="wrapper bg-light angled upper-end lower-end">
+      <div class="container py-14 py-md-16">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-17 align-items-center">
+          <div class="col-lg-6 position-relative order-lg-2">
+            <div class="shape bg-dot primary rellax w-16 h-20" data-rellax-speed="1" style="top: 3rem; left: 5.5rem"></div>
+            <div class="overlap-grid overlap-grid-2">
+              <div class="item">
+                <figure class="rounded shadow"><img src="../static/assets/img/photos/about2.jpg" srcset="../static/assets/img/photos/about2@2x.jpg 2x" alt=""></figure>
+              </div>
+              <div class="item">
+                <figure class="rounded shadow"><img src="../static/assets/img/photos/about3.jpg" srcset="../static/assets/img/photos/about3@2x.jpg 2x" alt=""></figure>
+              </div>
+            </div>
+          </div>
+          <!--/column -->
+          <div class="col-lg-6">
+            <img src="../static/assets/img/icons/lineal/megaphone.svg" class="svg-inject icon-svg icon-svg-md mb-4" alt="" />
+            <h2 class="display-4 mb-3">Who Are We?</h2>
+            <p class="lead fs-lg">We are a digital and branding company that believes in the power of creative strategy and along with great design.</p>
+            <p class="mb-6">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+            <div class="row gy-3 gx-xl-8">
+              <div class="col-xl-6">
+                <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+                  <li><span><i class="uil uil-check"></i></span><span>Aenean eu leo quam ornare curabitur blandit tempus.</span></li>
+                  <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Nullam quis risus eget urna mollis ornare donec elit.</span></li>
+                </ul>
+              </div>
+              <!--/column -->
+              <div class="col-xl-6">
+                <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
+                  <li><span><i class="uil uil-check"></i></span><span>Etiam porta sem malesuada magna mollis euismod.</span></li>
+                  <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Fermentum massa vivamus faucibus amet euismod.</span></li>
+                </ul>
+              </div>
+              <!--/column -->
+            </div>
+            <!--/.row -->
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+        <div class="row mb-5">
+          <div class="col-md-10 col-xl-8 col-xxl-7 mx-auto text-center">
+            <img src="../static/assets/img/icons/lineal/list.svg" class="svg-inject icon-svg icon-svg-md mb-4" alt="" />
+            <h2 class="display-4 mb-4 px-lg-14">Here are 3 working steps to organize our business projects.</h2>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+        <section class="wrapper bg-light">
+          <div class="container py-14 py-md-9">
+            <div class="row gx-lg-8 gx-xl-12 gy-6 process-wrapper line">
+              <div class="col-md-6 col-lg-3"> <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none mb-4"><span class="number">01</span></span>
+                <h4 class="mb-1">Concept</h4>
+                <p class="mb-0">Nulla vitae elit libero elit non porta gravida eget metus cras. Aenean eu leo quam. Pellentesque ornare.</p>
+              </div>
+              <!--/column -->
+              <div class="col-md-6 col-lg-3"> <span class="icon btn btn-circle btn-lg btn-primary pe-none mb-4"><span class="number">02</span></span>
+                <h4 class="mb-1">Prepare</h4>
+                <p class="mb-0">Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.</p>
+              </div>
+              <!--/column -->
+              <div class="col-md-6 col-lg-3"> <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none mb-4"><span class="number">03</span></span>
+                <h4 class="mb-1">Retouch</h4>
+                <p class="mb-0">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero.</p>
+              </div>
+              <!--/column -->
+              <div class="col-md-6 col-lg-3"> <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none mb-4"><span class="number">04</span></span>
+                <h4 class="mb-1">Finalize</h4>
+                <p class="mb-0">Integer posuere erat, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo.</p>
+              </div>
+              <!--/column -->
+            </div>
+            <!--/.row -->
+          </div>
+          <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <!--/.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-16 pb-14 pb-md-0">
+        <div class="row gx-lg-8 gx-xl-0 align-items-center">
+          <div class="col-md-5 col-lg-5 col-xl-4 offset-xl-1 d-none d-md-flex position-relative align-self-end">
+            <div class="shape rounded-circle bg-pale-primary rellax w-21 h-21 d-md-none d-lg-block" data-rellax-speed="1" style="top: 7rem; left: 1rem"></div>
+            <figure><img src="../static/assets/img/photos/co1.png" srcset="../static/assets/img/photos/co1@2x.png 2x" alt=""></figure>
+          </div>
+          <!--/column -->
+          <div class="col-md-7 col-lg-6 col-xl-6 col-xxl-5 offset-xl-1">
+            <div class="swiper-container dots-start dots-closer mt-md-10 mb-md-15" data-margin="30" data-dots="true">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <blockquote class="icon fs-lg">
+                      <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper. Cras justo odio consectetur nulla dapibus curabitur blandit.”</p>
+                      <div class="blockquote-details">
+                        <div class="info ps-0">
+                          <h5 class="mb-1">Coriss Ambady</h5>
+                          <p class="mb-0">Financial Analyst</p>
+                        </div>
+                      </div>
+                    </blockquote>
+                    <nav class="nav social mb-0">
+                      <a href="#"><i class="uil uil-twitter"></i></a>
+                      <a href="#"><i class="uil uil-facebook-f"></i></a>
+                      <a href="#"><i class="uil uil-dribbble"></i></a>
+                    </nav>
+                  </div>
+                  <!--/.swiper-slide -->
+                  <div class="swiper-slide">
+                    <blockquote class="icon fs-lg">
+                      <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper. Cras justo odio consectetur adipiscing dapibus curabitur blandit.”</p>
+                      <div class="blockquote-details">
+                        <div class="info ps-0">
+                          <h5 class="mb-1">Cory Zamora</h5>
+                          <p class="mb-0">Marketing Specialist</p>
+                        </div>
+                      </div>
+                    </blockquote>
+                    <nav class="nav social mb-0">
+                      <a href="#"><i class="uil uil-twitter"></i></a>
+                      <a href="#"><i class="uil uil-facebook-f"></i></a>
+                      <a href="#"><i class="uil uil-dribbble"></i></a>
+                    </nav>
+                  </div>
+                  <!--/.swiper-slide -->
+                  <div class="swiper-slide">
+                    <blockquote class="icon fs-lg">
+                      <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper. Cras justo odio consectetur adipiscing dapibus curabitur blandit.”</p>
+                      <div class="blockquote-details">
+                        <div class="info ps-0">
+                          <h5 class="mb-1">Nikolas Brooten</h5>
+                          <p class="mb-0">Sales Manager</p>
+                        </div>
+                      </div>
+                    </blockquote>
+                    <nav class="nav social mb-0">
+                      <a href="#"><i class="uil uil-twitter"></i></a>
+                      <a href="#"><i class="uil uil-facebook-f"></i></a>
+                      <a href="#"><i class="uil uil-dribbble"></i></a>
+                    </nav>
+                  </div>
+                  <!--/.swiper-slide -->
+                </div>
+                <!--/.swiper-wrapper -->
+              </div>
+              <!-- /.swiper -->
+            </div>
+            <!-- /.swiper-container -->
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section class="wrapper bg-light">
+      <div class="container py-14 py-md-10 mt-4">
+        <div class="row mb-10">
+          <div class="col-xl-10 mx-auto">
+            <div class="row align-items-center counter-wrapper gy-6 text-center">
+              <div class="col-md-3">
+                <img src="../static/assets/img/icons/lineal/check.svg" class="svg-inject icon-svg icon-svg-lg text-primary mb-3" alt="" />
+                <h3 class="counter">7518</h3>
+                <p>Completed Projects</p>
+              </div>
+              <!--/column -->
+              <div class="col-md-3">
+                <img src="../static/assets/img/icons/lineal/user.svg" class="svg-inject icon-svg icon-svg-lg text-primary mb-3" alt="" />
+                <h3 class="counter">3472</h3>
+                <p>Satisfied Customers</p>
+              </div>
+              <!--/column -->
+              <div class="col-md-3">
+                <img src="../static/assets/img/icons/lineal/briefcase-2.svg" class="svg-inject icon-svg icon-svg-lg text-primary mb-3" alt="" />
+                <h3 class="counter">2184</h3>
+                <p>Expert Employees</p>
+              </div>
+              <!--/column -->
+              <div class="col-md-3">
+                <img src="../static/assets/img/icons/lineal/award-2.svg" class="svg-inject icon-svg icon-svg-lg text-primary mb-3" alt="" />
+                <h3 class="counter">4523</h3>
+                <p>Awards Won</p>
+              </div>
+              <!--/column -->
+            </div>
+            <!--/.row -->
+          </div>
+          <!-- /column -->
+        </div>   
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+
+    <!-- /section -->
+  </div>
+{% endblock content %}

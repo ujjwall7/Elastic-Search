@@ -1,0 +1,383 @@
+{% extends 'base.html' %}
+
+{% block metatags %}
+<title>{% if seo_index.meta_title %}{{seo_index.meta_title}}{% else %}{{company.company_name}}{% endif %}</title>
+<meta name="description" content="{{ seo_index.meta_description }}">
+<meta name="keywords" content="{{ seo_index.meta_keywords }}">
+<link rel="canonical" href="{{ seo_index.canonical_tag }}">
+{% endblock metatags %}
+
+{% block style %}
+
+{% endblock style %}
+    
+{% block js %}
+
+{% endblock js %}
+
+{% block content %} 
+
+<section class="wrapper bg-light">
+  <div class="container pt-md-7 pb-14 pb-md-16">
+    <div class="row gx-md-8 gx-xl-12 gy-6 align-items-center">
+      <div class="col-md-8 col-lg-6 mx-auto">
+        <div class="img-mask mask-1"><img src="../static/assets/img/photos/about29.jpg" alt="" /></div>
+      </div>
+      <!--/column -->
+      <div class="col-lg-6">
+        <h2 class="display-5 mb-5">Hi, I'm Julia, a documentary wedding and couples photographer currently working from and based in London.</h2>
+        <p class="mb-6">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio. Sed posuere consectetur est at lobortis facilisis in.</p>
+        <div class="row counter-wrapper gy-6">
+          <div class="col-md-4">
+            <h3 class="counter">500K+</h3>
+            <p>Shots Taken</p>
+          </div>
+          <!--/column -->
+          <div class="col-md-4">
+            <h3 class="counter">500+</h3>
+            <p>Happy Clients</p>
+          </div>
+          <!--/column -->
+          <div class="col-md-4">
+            <h3 class="counter">25</h3>
+            <p>Awards Won</p>
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/column -->
+    </div>
+    <!-- /.row -->
+    <div class="row gx-md-8 gx-xl-12 gy-6 mt-8">
+      <div class="col-lg-4">
+        <h3>My Skills</h3>
+        <p>Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna vel consectetur purus sit amet fermentum.</p>
+        <ul class="progress-list">
+          <li>
+            <p>Photoshop</p>
+            <div class="progressbar line soft-primary" data-value="100"></div>
+          </li>
+          <li>
+            <p>Final Cut</p>
+            <div class="progressbar line soft-primary" data-value="80"></div>
+          </li>
+          <li>
+            <p>Motion Video</p>
+            <div class="progressbar line soft-primary" data-value="85"></div>
+          </li>
+          <li>
+            <p>Manupilation</p>
+            <div class="progressbar line soft-primary" data-value="75"></div>
+          </li>
+        </ul>
+        <!-- /.progress-list -->
+      </div>
+      <!-- /column -->
+      <div class="col-lg-4">
+        <h3>Why Choose Me?</h3>
+        <p>Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies. Cras mattis consectetur purus amet fermentum.</p>
+        <ul class="icon-list bullet-bg bullet-soft-primary">
+          <li><i class="uil uil-check"></i>Aenean eu leo quam pellentesque.</li>
+          <li><i class="uil uil-check"></i>Nullam quis risus eget urna mollis.</li>
+          <li><i class="uil uil-check"></i>Donec id elit non mi porta gravida.</li>
+          <li><i class="uil uil-check"></i>Fusce dapibus tellus ac commodo.</li>
+          <li><i class="uil uil-check"></i>Cras justo odio dapibus ac facilisis in.</li>
+        </ul>
+      </div>
+      <!-- /column -->
+      <div class="col-lg-4">
+        <h3>My Process</h3>
+        <div class="d-flex flex-row mb-5">
+          <div>
+            <span class="icon btn btn-circle btn-soft-primary pe-none mt-1 me-5"><span class="number fs-18">1</span></span>
+          </div>
+          <div>
+            <h5 class="mb-1">Collect Ideas</h5>
+            <p class="mb-0">Nulla vitae elit libero pharetra augue dapibus. Praesent commodo cursus.</p>
+          </div>
+        </div>
+        <div class="d-flex flex-row mb-5">
+          <div>
+            <span class="icon btn btn-circle btn-soft-primary pe-none mt-1 me-5"><span class="number fs-18">2</span></span>
+          </div>
+          <div>
+            <h5 class="mb-1">Data Analysis</h5>
+            <p class="mb-0">Vivamus sagittis lacus vel augue laoreet. Etiam porta sem malesuada magna.</p>
+          </div>
+        </div>
+        <div class="d-flex flex-row">
+          <div>
+            <span class="icon btn btn-circle btn-soft-primary pe-none mt-1 me-5"><span class="number fs-18">3</span></span>
+          </div>
+          <div>
+            <h5 class="mb-1">Finalize Product</h5>
+            <p class="mb-0">Cras mattis consectetur purus sit amet. Aenean lacinia bibendum nulla sed.</p>
+          </div>
+        </div>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+<!-- /section -->
+<section class="wrapper bg-light wrapper-border">
+  <div class="container py-14 py-md-9">
+    <div class="row gx-lg-8 gx-xl-12 gy-6 mb-10">
+      <div class="col-lg-6 order-lg-2">
+        <ul class="progress-list">
+          <li>
+            <p>Web Design</p>
+            <div class="progressbar line soft-violet" data-value="100"></div>
+          </li>
+          <li>
+            <p>Mobile Design</p>
+            <div class="progressbar line soft-blue" data-value="80"></div>
+          </li>
+          <li>
+            <p>Development</p>
+            <div class="progressbar line soft-leaf" data-value="85"></div>
+          </li>
+          <li>
+            <p>SEO</p>
+            <div class="progressbar line soft-pink" data-value="90"></div>
+          </li>
+        </ul>
+        <!-- /.progress-list -->
+      </div>
+      <!--/column -->
+      <div class="col-lg-6">
+        <h2 class="display-4 mb-3">What I Do?</h2>
+        <p class="lead fs-20 mb-5">Duis mollis est commodo luctus nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl.</p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    <div class="row gx-lg-8 gx-xl-12 gy-6 text-center">
+      <div class="col-md-6 col-lg-3">
+        <img src="../static/assets/img/icons/lineal/browser.svg" class="svg-inject icon-svg icon-svg-md text-violet mb-3" alt="" />
+        <h4>Web Design</h4>
+        <p class="mb-2">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo cum sociis natoque magnis.</p>
+      </div>
+      <!--/column -->
+      <div class="col-md-6 col-lg-3">
+        <img src="../static/assets/img/icons/lineal/smartphone.svg" class="svg-inject icon-svg icon-svg-md text-blue mb-3" alt="" />
+        <h4>Mobile Design</h4>
+        <p class="mb-2">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo cum sociis natoque magnis.</p>
+      </div>
+      <!--/column -->
+      <div class="col-md-6 col-lg-3">
+        <img src="../static/assets/img/icons/lineal/settings-3.svg" class="svg-inject icon-svg icon-svg-md text-leaf mb-3" alt="" />
+        <h4>Development</h4>
+        <p class="mb-2">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo cum sociis natoque magnis.</p>
+      </div>
+      <!--/column -->
+      <div class="col-md-6 col-lg-3">
+        <img src="../static/assets/img/icons/lineal/search-2.svg" class="svg-inject icon-svg icon-svg-md text-pink mb-3" alt="" />
+        <h4>SEO</h4>
+        <p class="mb-2">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo cum sociis natoque magnis.</p>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+
+<section class="wrapper bg-light">
+  <div class="container pt-md-16">
+    <div class="row">
+      <div class="col-lg-9 ">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">Latest Projects</h2>
+        <h3 class="display-4 mb-10">Check out some of our awesome projects with creative ideas and great design.</h3>
+      </div>
+      <div class="col-md-4 col-lg-3 ms-md-auto text-md-end mt-5 mt-md-0 pb-4">
+        <a href="#" class="btn btn-outline-primary rounded-pill mb-0">See All Projects</a>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+  <div class="container-fluid px-md-6">
+    <div class="swiper-container blog grid-view" data-margin="30" data-nav="true" data-dots="true" data-items-xxl="3" data-items-md="2" data-items-xs="1">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <figure class="rounded"><img src="../static/assets/img/photos/pp10.jpg" alt="" /></figure>
+          </div>
+          <!--/.swiper-slide -->
+          <div class="swiper-slide">
+            <figure class="rounded"><img src="../static/assets/img/photos/pp11.jpg" alt="" /></figure>
+          </div>
+          <!--/.swiper-slide -->
+          <div class="swiper-slide">
+            <figure class="rounded"><img src="../static/assets/img/photos/pp12.jpg" alt="" /></figure>
+          </div>
+          <!--/.swiper-slide -->
+          <div class="swiper-slide">
+            <figure class="rounded"><img src="../static/assets/img/photos/pp13.jpg" alt="" /></figure>
+          </div>
+          <!--/.swiper-slide -->
+          <div class="swiper-slide">
+            <figure class="rounded"><img src="../static/assets/img/photos/pp14.jpg" alt="" /></figure>
+          </div>
+          <!--/.swiper-slide -->
+          <div class="swiper-slide">
+            <figure class="rounded"><img src="../static/assets/img/photos/pp15.jpg" alt="" /></figure>
+          </div>
+          <!--/.swiper-slide -->
+          <div class="swiper-slide">
+            <figure class="rounded"><img src="../static/assets/img/photos/pp16.jpg" alt="" /></figure>
+          </div>
+          <!--/.swiper-slide -->
+        </div>
+        <!--/.swiper-wrapper -->
+      </div>
+      <!-- /.swiper -->
+    </div>
+    <!-- /.swiper-container -->
+  </div>
+  <!-- /.container-fluid -->
+</section>
+<!-- /section -->
+
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-14">
+
+    <div class="row">
+      <div class="col-lg-9 ">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">Our Journal</h2>
+        <h3 class="display-4 mb-10">Here are the latest company news from our blog that got the most attention.</h3>
+      </div>
+      <div class="col-md-4 col-lg-3 ms-md-auto text-md-end mt-5 mt-md-0 pb-4">
+        <a href="#" class="btn btn-outline-primary rounded-pill mb-0">See All Blogs</a>
+      </div>
+      <!-- /column -->
+    </div>
+    <div class="swiper-container blog grid-view mb-6" data-margin="30" data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <article>
+              <figure class="overlay overlay-1 hover-scale rounded mb-5"><a href="#"> <img src="../static/assets/img/photos/b4.jpg" alt="" /></a>
+                <figcaption>
+                  <h5 class="from-top mb-0">Read More</h5>
+                </figcaption>
+              </figure>
+              <div class="post-header">
+                <div class="post-category text-line">
+                  <a href="#" class="hover" rel="category">Coding</a>
+                </div>
+                <!-- /.post-category -->
+                <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Ligula tristique quis risus</a></h2>
+              </div>
+              <!-- /.post-header -->
+              <div class="post-footer">
+                <ul class="post-meta">
+                  <li class="post-date"><i class="uil uil-calendar-alt"></i><span>14 Apr 2022</span></li>
+                  <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>4</a></li>
+                </ul>
+                <!-- /.post-meta -->
+              </div>
+              <!-- /.post-footer -->
+            </article>
+            <!-- /article -->
+          </div>
+          <!--/.swiper-slide -->
+          <div class="swiper-slide">
+            <article>
+              <figure class="overlay overlay-1 hover-scale rounded mb-5"><a href="#"> <img src="../static/assets/img/photos/b5.jpg" alt="" /></a>
+                <figcaption>
+                  <h5 class="from-top mb-0">Read More</h5>
+                </figcaption>
+              </figure>
+              <div class="post-header">
+                <div class="post-category text-line">
+                  <a href="#" class="hover" rel="category">Workspace</a>
+                </div>
+                <!-- /.post-category -->
+                <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Nullam id dolor elit id nibh</a></h2>
+              </div>
+              <!-- /.post-header -->
+              <div class="post-footer">
+                <ul class="post-meta">
+                  <li class="post-date"><i class="uil uil-calendar-alt"></i><span>29 Mar 2022</span></li>
+                  <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>3</a></li>
+                </ul>
+                <!-- /.post-meta -->
+              </div>
+              <!-- /.post-footer -->
+            </article>
+            <!-- /article -->
+          </div>
+          <!--/.swiper-slide -->
+          <div class="swiper-slide">
+            <article>
+              <figure class="overlay overlay-1 hover-scale rounded mb-5"><a href="#"> <img src="../static/assets/img/photos/b6.jpg" alt="" /></a>
+                <figcaption>
+                  <h5 class="from-top mb-0">Read More</h5>
+                </figcaption>
+              </figure>
+              <div class="post-header">
+                <div class="post-category text-line">
+                  <a href="#" class="hover" rel="category">Meeting</a>
+                </div>
+                <!-- /.post-category -->
+                <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Ultricies fusce porta elit</a></h2>
+              </div>
+              <!-- /.post-header -->
+              <div class="post-footer">
+                <ul class="post-meta">
+                  <li class="post-date"><i class="uil uil-calendar-alt"></i><span>26 Feb 2022</span></li>
+                  <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>6</a></li>
+                </ul>
+                <!-- /.post-meta -->
+              </div>
+              <!-- /.post-footer -->
+            </article>
+            <!-- /article -->
+          </div>
+          <!--/.swiper-slide -->
+          <div class="swiper-slide">
+            <article>
+              <figure class="overlay overlay-1 hover-scale rounded mb-5"><a href="#"> <img src="../static/assets/img/photos/b7.jpg" alt="" /></a>
+                <figcaption>
+                  <h5 class="from-top mb-0">Read More</h5>
+                </figcaption>
+              </figure>
+              <div class="post-header">
+                <div class="post-category text-line">
+                  <a href="#" class="hover" rel="category">Business Tips</a>
+                </div>
+                <!-- /.post-category -->
+                <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Morbi leo risus porta eget</a></h2>
+              </div>
+              <div class="post-footer">
+                <ul class="post-meta">
+                  <li class="post-date"><i class="uil uil-calendar-alt"></i><span>7 Jan 2022</span></li>
+                  <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>2</a></li>
+                </ul>
+                <!-- /.post-meta -->
+              </div>
+              <!-- /.post-footer -->
+            </article>
+            <!-- /article -->
+          </div>
+          <!--/.swiper-slide -->
+        </div>
+        <!--/.swiper-wrapper -->
+      </div>
+      <!-- /.swiper -->
+    </div>
+    <!-- /.swiper-container -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+
+{% endblock content %} 

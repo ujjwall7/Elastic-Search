@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block metatags %}
+<title>{% if seo_index.meta_title %}{{seo_index.meta_title}}{% else %}{{company.company_name}}{% endif %}</title>
+<meta name="description" content="{{ seo_index.meta_description }}">
+<meta name="keywords" content="{{ seo_index.meta_keywords }}">
+<link rel="canonical" href="{{ seo_index.canonical_tag }}">
+{% endblock metatags %}
+
+{% block style %}
+
+{% endblock style %}
+    
+{% block js %}
+
+{% endblock js %}
+
+{% block content %} 
+
+    <section class="section-frame overflow-hidden">
+      <div class="wrapper bg-gray">
+        <div class="py-13  text-center">
+          <div class="row">
+            <div class="col-lg-10 col-xxl-8 mx-auto">
+              <h1 class="display-1 mb-4">Our Services</h1>
+            <p class="lead fs-lg mb-0">We are a creative company that focuses on establishing long-term relationships with customers</p>
+
+            </div>
+            <!-- /column -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.wrapper -->
+    </section>
+
+    <!-- /section -->
+<section class="wrapper bg-light">
+  <div class="container py-14 py-md-16">
+    <div class="row">
+      <div class="col-lg-8 col-xl-7 col-xxl-6">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">What We Do?</h2>
+        <h3 class="display-4 mb-9">The service we offer is specifically designed to meet your needs.</h3>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="row gx-md-8 gy-8">
+      <div class="col-md-6 col-lg-3">
+        <div class="icon btn btn-block btn-lg btn-soft-yellow pe-none mb-5"> <i class="uil uil-phone-volume"></i> </div>
+        <h4>24/7 Support</h4>
+        <p class="mb-3">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo.</p>
+        <a href="#" class="more hover link-yellow">Learn More</a>
+      </div>
+      <!--/column -->
+      <div class="col-md-6 col-lg-3">
+        <div class="icon btn btn-block btn-lg btn-soft-red pe-none mb-5"> <i class="uil uil-shield-exclamation"></i> </div>
+        <h4>Secure Payments</h4>
+        <p class="mb-3">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo.</p>
+        <a href="#" class="more hover link-red">Learn More</a>
+      </div>
+      <!--/column -->
+      <div class="col-md-6 col-lg-3">
+        <div class="icon btn btn-block btn-lg btn-soft-leaf pe-none mb-5"> <i class="uil uil-laptop-cloud"></i> </div>
+        <h4>Daily Updates</h4>
+        <p class="mb-3">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo.</p>
+        <a href="#" class="more hover link-leaf">Learn More</a>
+      </div>
+      <!--/column -->
+      <div class="col-md-6 col-lg-3">
+        <div class="icon btn btn-block btn-lg btn-soft-blue pe-none mb-5"> <i class="uil uil-chart-line"></i> </div>
+        <h4>Market Research</h4>
+        <p class="mb-3">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo.</p>
+        <a href="#" class="more hover link-blue">Learn More</a>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /section -->
+ 
+    <!-- /section -->
+    <section class="wrapper bg-soft-primary" style="margin: 0px;">
+      
+      <div class="row text-center" style="margin: 1rem; margin-bottom: 5rem;">
+        <div class="col-lg-9 mx-auto mb-10">
+          <h2 class="fs-15 text-uppercase text-muted mb-3 mt-12">Our Process</h2>
+          <h3 class="display-4 mb-0 text-center px-xl-10 px-xxl-15">Find out everything you need to know about creating a business process model</h3>
+          <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-9 mb-6 line">
+
+            <div class="col-md-6 col-lg-3"> <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none mb-4"><span class="number">01</span></span>
+              <h4 class="mb-1">Concept</h4>
+              <p class="mb-0">Nulla vitae elit libero elit non porta gravida eget metus cras. Aenean eu leo quam. Pellentesque ornare.</p>
+            </div>
+            <!--/column -->
+            <div class="col-md-6 col-lg-3"> <span class="icon btn btn-circle btn-lg btn-primary pe-none mb-4"><span class="number">02</span></span>
+              <h4 class="mb-1">Prepare</h4>
+              <p class="mb-0">Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.</p>
+            </div>
+            <!--/column -->
+            <div class="col-md-6 col-lg-3"> <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none mb-4"><span class="number">03</span></span>
+              <h4 class="mb-1">Retouch</h4>
+              <p class="mb-0">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero.</p>
+            </div>
+            <!--/column -->
+            <div class="col-md-6 col-lg-3"> <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none mb-4"><span class="number">04</span></span>
+              <h4 class="mb-1">Finalize</h4>
+              <p class="mb-0">Integer posuere erat, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo.</p>
+            </div>
+            <!--/column -->
+          </div>
+          <!--/.row -->
+        </div>
+        <!-- /column -->
+      </div>
+      <!-- /.container -->
+    </section>
+
+  </div>
+  {% endblock content %} 
