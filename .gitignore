@@ -1,4 +1,4 @@
-*pyc
+*pyc 
 env
 media/*
 db.sqlite3
