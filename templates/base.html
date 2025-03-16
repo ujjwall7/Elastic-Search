@@ -12,6 +12,10 @@
   <link rel="stylesheet" href="../static/assets/css/plugins.css">
   <link rel="stylesheet" href="../static/assets/css/style.css">
   <link rel="stylesheet" href="../static/assets/css/colors/pink.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/81c3512db4.js" crossorigin="anonymous"></script>
+
   <style>
     .success-toast{
     background: #04aa6d;
@@ -88,7 +92,7 @@
                     <a class="nav-link" href="{% url 'blogs' %}">Blogs</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    <a class="nav-link" href="{% url 'contact_form' %}">Contact</a>
                   </li>
                   
                 </ul>
@@ -115,12 +119,7 @@
             <div class="navbar-other w-100 d-flex ms-auto">
               <ul class="navbar-nav flex-row align-items-center ms-auto">
                 <li class="nav-item">
-                  <nav class="nav social social-muted justify-content-end text-end">
-                    <a href="#"><i class="uil uil-twitter"></i></a>
-                    <a href="#"><i class="uil uil-facebook-f"></i></a>
-                    <a href="#"><i class="uil uil-dribbble"></i></a>
-                    <a href="#"><i class="uil uil-instagram"></i></a>
-                  </nav>
+
                   <!-- /.social -->
                 </li>
                 <li class="nav-item d-lg-none">
@@ -203,11 +202,45 @@
       <div class="d-md-flex align-items-center justify-content-between">
         <p class="mb-2 mb-lg-0">© 2023 Sandbox. All rights reserved.</p>
         <nav class="nav social social-muted mb-0 text-md-end">
-          <a href="#"><i class="uil uil-twitter"></i></a>
-          <a href="#"><i class="uil uil-facebook-f"></i></a>
-          <a href="#"><i class="uil uil-dribbble"></i></a>
-          <a href="#"><i class="uil uil-instagram"></i></a>
-          <a href="#"><i class="uil uil-youtube"></i></a>
+          {% if fb or ig or li or tw or ytube or telg or whatsapp or threads %}
+            {% if fb %}
+              <a href="{{fb.url}}"><i class="fab fa-facebook-f"></i></a>
+            {% endif %}
+
+            {% if ig %}
+              <a href="{{ig.url}}"><i class="fab fa-instagram"></i></a>
+            {% endif %}
+            
+            {% if li %}
+              <a href="{{li.url}}"><i class="fab fa-linkedin"></i></a>
+            {% endif %}
+              
+            {% if tw %}
+              <a href="{{tw.url}}"><i class="fab fa-twitter"></i></a>
+            {% endif %}
+            
+            {% if ytube %}
+              <a href="{{ytube.url}}"><i class="fab fa-youtube"></i></a>
+            {% endif %}
+              
+            {% if telg %}                                        
+              <a href="{{telg.url}}"><i class="fab fa-telegram"></i></a>
+            {% endif %}
+            
+            {% if whatsapp %}                                        
+              <a href="{{whatsapp.url}}"><i class="fab fa-whatsapp"></i></a>
+            {% endif %}
+
+            {% if threads %}                                        
+              <a href="{{threads.url}}"><i class="fa-brands fa-threads"></i></a>
+            {% endif %}
+          {% else %}
+            <a href="#"><i class="uil uil-twitter"></i></a>
+            <a href="#"><i class="uil uil-facebook-f"></i></a>
+            <a href="#"><i class="uil uil-dribbble"></i></a>
+            <a href="#"><i class="uil uil-instagram"></i></a>
+            <a href="#"><i class="uil uil-youtube"></i></a>
+          {% endif %}
         </nav>
         <!-- /.social -->
       </div>
@@ -222,6 +255,7 @@
   <script src="../static/assets/js/plugins.js"></script>
   <script src="../static/assets/js/theme.js"></script>
   {% block js %}{% endblock js %}
+
 </body>
 
 </html>

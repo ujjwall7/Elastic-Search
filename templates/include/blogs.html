@@ -1,0 +1,201 @@
+<section class="section-frame overflow-hidden m-0">
+    <div class="wrapper bg-gray">
+      <div class="py-13  text-center">
+        <div class="row">
+          <div class="col-lg-10 col-xxl-8 mx-auto">
+            <h1 class="display-1 mb-4">Our Blog</h1>
+          <p class="lead fs-lg mb-0">Stay updated with the latest insights, tips, and trends in web development, design, and freelancing. Our blog covers everything from technical guides to industry best practices, helping you learn and grow in the digital world.</p>
+  
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.wrapper -->
+  </section>
+  
+  <section class="wrapper bg-light">
+    <div class="container pb-1 pb-md-16 pt-8">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          
+          <!-- /.blog -->
+          <div class="blog grid grid-view">
+            <div class="row isotope gx-md-8 gy-8 mb-8">
+
+              
+                {% for x in blogs %}
+                <article class="item post col-md-6">
+                  <div class="card">
+                    <figure class="card-img-top overlay overlay-1 hover-scale">
+                      <a href="">
+                        <img src="{{ x.image_1.url }}" alt="{{ x.title }}" />
+                      </a>
+                      <figcaption>
+                        <h5 class="from-top mb-0">Read More</h5>
+                      </figcaption>
+                    </figure>
+                    <div class="card-body">
+                      <div class="post-header">
+                        <div class="post-category text-line">
+                          <a href="#" class="hover" rel="category">{{ x.category.name }}</a>
+                        </div>
+                        <!-- /.post-category -->
+                        <h2 class="post-title h3 mt-1 mb-3">
+                          <a class="link-dark" href="">{{ x.title }}</a>
+                        </h2>
+                      </div>
+                      <!-- /.post-header -->
+                      <div class="post-content">
+                        <p>{{ x.short_description }}</p>
+                      </div>
+                      <!-- /.post-content -->
+                    </div>
+                    <!--/.card-body -->
+                    <div class="card-footer">
+                      <ul class="post-meta d-flex mb-0">
+                        <li class="post-date">
+                          <i class="uil uil-calendar-alt"></i><span>{{ x.date|date:"d M Y" }}</span>
+                        </li>
+                        <li class="post-comments">
+                          <a href="">
+                            <i class="uil uil-comment"></i>{{ x.countComments }}
+                          </a>
+                        </li>
+                      </ul>
+                      <!-- /.post-meta -->
+                    </div>
+                    <!-- /.card-footer -->
+                  </div>
+                  <!-- /.card -->
+                </article>
+                {% empty %}
+                <h1>No blogs found.</h1>
+                {% endfor %}
+                
+                
+
+              <!-- /.post -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.blog -->
+
+          {% if blogs %}
+
+          <nav class="d-flex" aria-label="pagination">
+            <ul class="pagination">
+              <li class="page-item">
+                {% if blogs.has_previous %}
+                  <a class="page-link" href="?page={{blogs.previous_page_number}}{% if cat_id %}&cat={{ cat_id }}{% endif %}{% if tags_id %}&tags={{ tags_id|join:',' }}{% endif %}{% if keyword %}&keyword={{ keyword }}{% endif %}" aria-label="Previous">
+                    <span aria-hidden="true"><i class="uil uil-arrow-left"></i></span>
+                  </a>
+                {% endif %}
+              </li>
+
+              {% for x in blogs.paginator.page_range %}
+                {% if x == 1 or x == blogs.paginator.num_pages or x == blogs.number or x == blogs.number|add:'-1' or x == blogs.number|add:'1' %}
+                  <li class="page-item {% if x == blogs.number %}active{% endif %}">
+                    <a class="page-link" href="?page={{ x }}{% if cat_id %}&cat={{ cat_id }}{% endif %}{% if tags_id %}&tags={{ tags_id|join:',' }}{% endif %}{% if keyword %}&keyword={{ keyword }}{% endif %}">{{ x }}</a>
+                  </li>
+                {% elif x == blogs.number|add:'-2' or x == blogs.number|add:'2' %}
+                  <li class="page-item"><a class="page-link">...</a></li>
+                {% endif %}
+              {% endfor %}
+
+              <li class="page-item">
+                {% if blogs.has_next %}
+                <a class="page-link" href="?page={{ blogs.next_page_number }}{% if cat_id %}&cat={{ cat_id }}{% endif %}{% if tags_id %}&tags={{ tags_id|join:',' }}{% endif %}{% if keyword %}&keyword={{ keyword }}{% endif %}" aria-label="Next">
+                  <span aria-hidden="true"><i class="uil uil-arrow-right"></i></span>
+                </a>
+                {% endif %}
+              </li>
+            </ul>
+            <!-- /.pagination -->
+          </nav>
+          <!-- /nav -->
+          {% endif %}
+
+        </div>
+        <aside class="col-lg-4 sidebar ">
+          <div class="widget">
+            <form action="" method="get">
+              <div id="mc_embed_signup_scroll2">
+                <div class="mc-field-group input-group form-floating">
+                  <input type="text" name="keyword" value="{{keyword}}" class="required email form-control" placeholder="Search">
+                  <label for="mce-EMAIL2">Search</label>
+                  <input type="submit" value="Search" class="btn btn-primary ">
+                </div>
+              </div>
+            </form>
+            <!-- /.search-form -->
+          </div>
+          <div class="widget">
+            <h4 class="widget-title mb-3">Popular Posts</h4>
+            <ul class="image-list">
+                {% for x in popular %}
+                <li>
+                  <figure class="rounded">
+                    <a href="{% url 'blog_detail' x.slug %}">
+                      <img src="{{ x.image_1.url }}" alt="{{ x.title }}">
+                    </a>
+                  </figure>
+                  <div class="post-content">
+                    <h6 class="mb-2">
+                      <a class="link-dark" href="{% url 'blog_detail' x.slug %}">{{ x.title }}</a>
+                    </h6>
+                    <ul class="post-meta">
+                      <li class="post-date">
+                        <i class="uil uil-calendar-alt"></i><span>{{ x.date|date:"d M Y" }}</span>
+                      </li>
+                      <li class="post-comments">
+                        <a href="{% url 'blog_detail' x.slug %}#comments">
+                          <i class="uil uil-comment"></i>{{ x.countComments }}
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- /.post-meta -->
+                  </div>
+                </li>
+                {% empty %}
+                <p>No popular blogs found.</p>
+                {% endfor %}
+                
+                
+              
+            </ul>
+            <!-- /.image-list -->
+          </div>
+          <!-- /.widget -->
+          <div class="widget">
+            <h4 class="widget-title mb-3">Categories</h4>
+            <ul class="unordered-list bullet-primary text-reset">
+                
+                {% for x in blogs_categories %}
+                    
+                  <li><a href="{% url 'blogs' %}?cat={{x.slug}}">{{x.name}} ({{x.count}})</a></li>
+    
+                {% endfor %}
+                    
+            </ul>
+          </div>
+          <!-- /.widget -->
+          <div class="widget">
+            <h4 class="widget-title mb-3">Tags</h4>
+            <ul class="list-unstyled tag-list">
+              
+              {% for x in blogs_tags %}
+                <li><a href="{% url 'blogs' %}?tags={{x.slug}}" class="btn btn-soft-ash btn-sm rounded-pill">{{x.name}} ({{x.count}})</a></li>
+              {% endfor %}
+                
+            </ul>
+          </div>
+        </aside>
+        <!-- /column -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </section>

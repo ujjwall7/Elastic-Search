@@ -1,4 +1,4 @@
-<form class="contact-form" method="post" id="contact_form">
+<form class="contact-form" method="post" id="contact_form_id">
   {% csrf_token %}
   <div class="row gx-4">
     <div class="col-md-6">
@@ -40,7 +40,7 @@
     <!-- /column -->
     <div class="col-12">
       <div class="form-floating mb-4">
-        <textarea id="form_message" name="message" id="subject" class="form-control" placeholder="Your message"
+        <textarea name="message" id="subject" class="form-control" placeholder="Your message"
           style="height: 150px"></textarea>
         <label for="form_message">Message *</label>
       </div>
@@ -54,11 +54,13 @@
   <!-- /.row -->
 </form>
 
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <div class="text-start" style="text-align: start;">
   <div id="contact_id"></div>
 </div>
 <script>
+  
   function showToast(message, colorClass, toaster_id) {
     let toast_id = document.getElementById(toaster_id);
     toast_id.innerHTML = '';
@@ -73,7 +75,7 @@
     }, 3000);
   }
 
-  $(document).on('submit', '#contact_form', function (e) {
+  $(document).on('submit', '#contact_form_id', function (e) {
     e.preventDefault();
     $.ajaxSetup({
       headers: {
@@ -86,6 +88,8 @@
       url: "{% url 'contact_form' %}",
       data: $(this).serialize(),
       success: function (response) {
+        console.log(response.message)
+        console.log(response.color_class)
         $('#loader').hide();
         showToast(response.message, response.color_class, 'contact_id');
         if (response.color_class === 'success-toast') {
@@ -166,14 +170,6 @@ for (const [code, phoneCode] of Object.entries(countryCodes)) {
 
     console.log("Auto-selected country code:", dropdown.value);
 });
-
 </script>
 
-<!-- 
-{% if country_code %}
-  <script>
-    document.getElementById("countryCodeDropdown").value = "{{ country_code }}";
-    console.log('{{country_code}}')
-  </script>
-{% endif %} -->
 

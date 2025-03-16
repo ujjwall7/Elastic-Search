@@ -27,8 +27,29 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Apps
-    'master'
+    'master',
+    'blogs',
+    'projects',
+
+    # Modules
+    'ckeditor',
 ]
+
+CKEDITOR_UPLOAD_PATH = 'uploads/ckeditor/'
+
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': '100%',
+        'extraPlugins': ','.join([
+            'image2',  # Required for enhanced image features
+            'uploadimage',  # Required for the image upload feature
+        ]),
+    },
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

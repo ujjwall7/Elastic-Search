@@ -10,20 +10,24 @@
 {% block style %}
 
 {% endblock style %}
-    
+
 {% block js %}
 
 {% endblock js %}
 
-{% block content %} 
+{% block content %}
 
-<section class="section-frame overflow-hidden">
+
+{% if not all_blogs and not blogs_section %}
+<section class="section-frame overflow-hidden m-0">
   <div class="wrapper bg-gray">
     <div class="py-13  text-center">
       <div class="row">
         <div class="col-lg-10 col-xxl-8 mx-auto">
           <h1 class="display-1 mb-4">Our Blog</h1>
-        <p class="lead fs-lg mb-0">Stay updated with the latest insights, tips, and trends in web development, design, and freelancing. Our blog covers everything from technical guides to industry best practices, helping you learn and grow in the digital world.</p>
+          <p class="lead fs-lg mb-0">Stay updated with the latest insights, tips, and trends in web development, design,
+            and freelancing. Our blog covers everything from technical guides to industry best practices, helping you
+            learn and grow in the digital world.</p>
 
         </div>
         <!-- /column -->
@@ -34,285 +38,592 @@
   </div>
   <!-- /.wrapper -->
 </section>
-    <section class="wrapper bg-light">
-      <div class="container pb-1 pb-md-16 pt-8">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            
-            <!-- /.blog -->
-            <div class="blog grid grid-view">
-              <div class="row isotope gx-md-8 gy-8 mb-8">
-                <article class="item post col-md-6">
-                  <div class="card">
-                    <figure class="card-img-top overlay overlay-1 hover-scale"><a href="#"> <img src="../static/assets/img/photos/b4.jpg" alt="" /></a>
-                      <figcaption>
-                        <h5 class="from-top mb-0">Read More</h5>
-                      </figcaption>
-                    </figure>
-                    <div class="card-body">
-                      <div class="post-header">
-                        <div class="post-category text-line">
-                          <a href="#" class="hover" rel="category">Coding</a>
-                        </div>
-                        <!-- /.post-category -->
-                        <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Ligula tristique quis risus</a></h2>
-                      </div>
-                      <!-- /.post-header -->
-                      <div class="post-content">
-                        <p>Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras imperdiet nun eu dolor. Aenean lacinia bibendum nulla sed.</p>
-                      </div>
-                      <!-- /.post-content -->
+
+<section class="wrapper bg-light">
+  <div class="container pb-1 pb-md-16 pt-8">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+
+        <!-- /.blog -->
+        <div class="blog grid grid-view">
+          <div class="row isotope gx-md-8 gy-8 mb-8">
+            <article class="item post col-md-6">
+              <div class="card">
+                <figure class="card-img-top overlay overlay-1 hover-scale"><a href="#"> <img
+                      src="../static/assets/img/photos/b4.jpg" alt="" /></a>
+                  <figcaption>
+                    <h5 class="from-top mb-0">Read More</h5>
+                  </figcaption>
+                </figure>
+                <div class="card-body">
+                  <div class="post-header">
+                    <div class="post-category text-line">
+                      <a href="#" class="hover" rel="category">Coding</a>
                     </div>
-                    <!--/.card-body -->
-                    <div class="card-footer">
-                      <ul class="post-meta d-flex mb-0">
-                        <li class="post-date"><i class="uil uil-calendar-alt"></i><span>14 Apr 2022</span></li>
-                        <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>4</a></li>
-                        <li class="post-likes ms-auto"><a href="#"><i class="uil uil-heart-alt"></i>5</a></li>
-                      </ul>
-                      <!-- /.post-meta -->
-                    </div>
-                    <!-- /.card-footer -->
+                    <!-- /.post-category -->
+                    <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Ligula tristique
+                        quis risus</a></h2>
                   </div>
-                  <!-- /.card -->
-                </article>
-                <!-- /.post -->
-                <article class="item post col-md-6">
-                  <div class="card">
-                    <figure class="card-img-top overlay overlay-1 hover-scale"><a href="#"> <img src="../static/assets/img/photos/b5.jpg" alt="" /></a>
-                      <figcaption>
-                        <h5 class="from-top mb-0">Read More</h5>
-                      </figcaption>
-                    </figure>
-                    <div class="card-body">
-                      <div class="post-header">
-                        <div class="post-category text-line">
-                          <a href="#" class="hover" rel="category">Workspace</a>
-                        </div>
-                        <!-- /.post-category -->
-                        <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Nullam id dolor elit id nibh</a></h2>
-                      </div>
-                      <!-- /.post-header -->
-                      <div class="post-content">
-                        <p>Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras imperdiet nun eu dolor. Aenean lacinia bibendum nulla sed.</p>
-                      </div>
-                      <!-- /.post-content -->
-                    </div>
-                    <!--/.card-body -->
-                    <div class="card-footer">
-                      <ul class="post-meta d-flex mb-0">
-                        <li class="post-date"><i class="uil uil-calendar-alt"></i><span>29 Mar 2022</span></li>
-                        <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>3</a></li>
-                        <li class="post-likes ms-auto"><a href="#"><i class="uil uil-heart-alt"></i>3</a></li>
-                      </ul>
-                      <!-- /.post-meta -->
-                    </div>
-                    <!-- /.card-footer -->
+                  <!-- /.post-header -->
+                  <div class="post-content">
+                    <p>Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras
+                      imperdiet nun eu dolor. Aenean lacinia bibendum nulla sed.</p>
                   </div>
-                  <!-- /.card -->
-                </article>
-                <!-- /.post -->
-                <article class="item post col-md-6">
-                  <div class="card">
-                    <figure class="card-img-top overlay overlay-1 hover-scale"><a href="#"> <img src="../static/assets/img/photos/b6.jpg" alt="" /></a>
-                      <figcaption>
-                        <h5 class="from-top mb-0">Read More</h5>
-                      </figcaption>
-                    </figure>
-                    <div class="card-body">
-                      <div class="post-header">
-                        <div class="post-category text-line">
-                          <a href="#" class="hover" rel="category">Meeting</a>
-                        </div>
-                        <!-- /.post-category -->
-                        <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Ultricies fusce porta elit</a></h2>
-                      </div>
-                      <!-- /.post-header -->
-                      <div class="post-content">
-                        <p>Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras imperdiet nun eu dolor. Aenean lacinia bibendum nulla sed.</p>
-                      </div>
-                      <!-- /.post-content -->
-                    </div>
-                    <!--/.card-body -->
-                    <div class="card-footer">
-                      <ul class="post-meta d-flex mb-0">
-                        <li class="post-date"><i class="uil uil-calendar-alt"></i><span>26 Feb 2022</span></li>
-                        <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>6</a></li>
-                        <li class="post-likes ms-auto"><a href="#"><i class="uil uil-heart-alt"></i>3</a></li>
-                      </ul>
-                      <!-- /.post-meta -->
-                    </div>
-                    <!-- /.card-footer -->
-                  </div>
-                  <!-- /.card -->
-                </article>
-                <!-- /.post -->
-                <article class="item post col-md-6">
-                  <div class="card">
-                    <figure class="card-img-top overlay overlay-1 hover-scale"><a href="#"> <img src="../static/assets/img/photos/b7.jpg" alt="" /></a>
-                      <figcaption>
-                        <h5 class="from-top mb-0">Read More</h5>
-                      </figcaption>
-                    </figure>
-                    <div class="card-body">
-                      <div class="post-header">
-                        <div class="post-category text-line">
-                          <a href="#" class="hover" rel="category">Business Tips</a>
-                        </div>
-                        <!-- /.post-category -->
-                        <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Morbi leo risus porta eget</a></h2>
-                      </div>
-                      <div class="post-content">
-                        <p>Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras imperdiet nun eu dolor. Aenean lacinia bibendum nulla sed.</p>
-                      </div>
-                      <!-- /.post-content -->
-                    </div>
-                    <!--/.card-body -->
-                    <div class="card-footer">
-                      <ul class="post-meta d-flex mb-0">
-                        <li class="post-date"><i class="uil uil-calendar-alt"></i><span>7 Jan 2022</span></li>
-                        <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>2</a></li>
-                        <li class="post-likes ms-auto"><a href="#"><i class="uil uil-heart-alt"></i>5</a></li>
-                      </ul>
-                      <!-- /.post-meta -->
-                    </div>
-                    <!-- /.card-footer -->
-                  </div>
-                  <!-- /.card -->
-                </article>
-                <!-- /.post -->
-              </div>
-              <!-- /.row -->
-            </div>
-            <!-- /.blog -->
-            <nav class="d-flex" aria-label="pagination">
-              <ul class="pagination">
-                <li class="page-item disabled">
-                  <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true"><i class="uil uil-arrow-left"></i></span>
-                  </a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true"><i class="uil uil-arrow-right"></i></span>
-                  </a>
-                </li>
-              </ul>
-              <!-- /.pagination -->
-            </nav>
-            <!-- /nav -->
-          </div>
-          <aside class="col-lg-4 sidebar ">
-            <div class="widget">
-              <form class="search-form">
-                <div class="form-floating mb-0">
-                  <input id="search-form" type="text" class="form-control" placeholder="Search">
-                  <label for="search-form">Search</label>
+                  <!-- /.post-content -->
                 </div>
-              </form>
-              <!-- /.search-form -->
-            </div>
-            <!-- /.widget -->
-            <div class="widget">
-              <h4 class="widget-title mb-3">About Us</h4>
-              <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.</p>
-              <nav class="nav social">
-                <a href="#"><i class="uil uil-twitter"></i></a>
-                <a href="#"><i class="uil uil-facebook-f"></i></a>
-                <a href="#"><i class="uil uil-dribbble"></i></a>
-                <a href="#"><i class="uil uil-instagram"></i></a>
-                <a href="#"><i class="uil uil-youtube"></i></a>
-              </nav>
-              <!-- /.social -->
-            </div>
-            <!-- /.widget -->
-            <div class="widget">
-              <h4 class="widget-title mb-3">Popular Posts</h4>
-              <ul class="image-list">
-                <li>
-                  <figure class="rounded"><a href="./blog-post.html"><img src="../static/assets/img/photos/a1.jpg" alt=""></a></figure>
-                  <div class="post-content">
-                    <h6 class="mb-2"> <a class="link-dark" href="./blog-post.html">Magna Mollis Ultricies</a> </h6>
-                    <ul class="post-meta">
-                      <li class="post-date"><i class="uil uil-calendar-alt"></i><span>26 Mar 2022</span></li>
-                      <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>3</a></li>
-                    </ul>
-                    <!-- /.post-meta -->
+                <!--/.card-body -->
+                <div class="card-footer">
+                  <ul class="post-meta d-flex mb-0">
+                    <li class="post-date"><i class="uil uil-calendar-alt"></i><span>14 Apr 2022</span></li>
+                    <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>4</a></li>
+                    <li class="post-likes ms-auto"><a href="#"><i class="uil uil-heart-alt"></i>5</a></li>
+                  </ul>
+                  <!-- /.post-meta -->
+                </div>
+                <!-- /.card-footer -->
+              </div>
+              <!-- /.card -->
+            </article>
+            <!-- /.post -->
+            <article class="item post col-md-6">
+              <div class="card">
+                <figure class="card-img-top overlay overlay-1 hover-scale"><a href="#"> <img
+                      src="../static/assets/img/photos/b5.jpg" alt="" /></a>
+                  <figcaption>
+                    <h5 class="from-top mb-0">Read More</h5>
+                  </figcaption>
+                </figure>
+                <div class="card-body">
+                  <div class="post-header">
+                    <div class="post-category text-line">
+                      <a href="#" class="hover" rel="category">Workspace</a>
+                    </div>
+                    <!-- /.post-category -->
+                    <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Nullam id dolor
+                        elit id nibh</a></h2>
                   </div>
-                </li>
-                <li>
-                  <figure class="rounded"> <a href="./blog-post.html"><img src="../static/assets/img/photos/a2.jpg" alt=""></a></figure>
+                  <!-- /.post-header -->
                   <div class="post-content">
-                    <h6 class="mb-2"> <a class="link-dark" href="./blog-post.html">Ornare Nullam Risus</a> </h6>
-                    <ul class="post-meta">
-                      <li class="post-date"><i class="uil uil-calendar-alt"></i><span>16 Feb 2022</span></li>
-                      <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>6</a></li>
-                    </ul>
-                    <!-- /.post-meta -->
+                    <p>Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras
+                      imperdiet nun eu dolor. Aenean lacinia bibendum nulla sed.</p>
                   </div>
-                </li>
-                <li>
-                  <figure class="rounded"><a href="./blog-post.html"><img src="../static/assets/img/photos/a3.jpg" alt=""></a></figure>
+                  <!-- /.post-content -->
+                </div>
+                <!--/.card-body -->
+                <div class="card-footer">
+                  <ul class="post-meta d-flex mb-0">
+                    <li class="post-date"><i class="uil uil-calendar-alt"></i><span>29 Mar 2022</span></li>
+                    <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>3</a></li>
+                    <li class="post-likes ms-auto"><a href="#"><i class="uil uil-heart-alt"></i>3</a></li>
+                  </ul>
+                  <!-- /.post-meta -->
+                </div>
+                <!-- /.card-footer -->
+              </div>
+              <!-- /.card -->
+            </article>
+            <!-- /.post -->
+            <article class="item post col-md-6">
+              <div class="card">
+                <figure class="card-img-top overlay overlay-1 hover-scale"><a href="#"> <img
+                      src="../static/assets/img/photos/b6.jpg" alt="" /></a>
+                  <figcaption>
+                    <h5 class="from-top mb-0">Read More</h5>
+                  </figcaption>
+                </figure>
+                <div class="card-body">
+                  <div class="post-header">
+                    <div class="post-category text-line">
+                      <a href="#" class="hover" rel="category">Meeting</a>
+                    </div>
+                    <!-- /.post-category -->
+                    <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Ultricies fusce
+                        porta elit</a></h2>
+                  </div>
+                  <!-- /.post-header -->
                   <div class="post-content">
-                    <h6 class="mb-2"> <a class="link-dark" href="./blog-post.html">Euismod Nullam Fusce</a> </h6>
-                    <ul class="post-meta">
-                      <li class="post-date"><i class="uil uil-calendar-alt"></i><span>8 Jan 2022</span></li>
-                      <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>5</a></li>
-                    </ul>
-                    <!-- /.post-meta -->
+                    <p>Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras
+                      imperdiet nun eu dolor. Aenean lacinia bibendum nulla sed.</p>
                   </div>
-                </li>
-              </ul>
-              <!-- /.image-list -->
-            </div>
-            <!-- /.widget -->
-            <div class="widget">
-              <h4 class="widget-title mb-3">Categories</h4>
-              <ul class="unordered-list bullet-primary text-reset">
-                <li><a href="#">Teamwork (21)</a></li>
-                <li><a href="#">Ideas (19)</a></li>
-                <li><a href="#">Workspace (16)</a></li>
-                <li><a href="#">Coding (7)</a></li>
-                <li><a href="#">Meeting (12)</a></li>
-                <li><a href="#">Business Tips (14)</a></li>
-              </ul>
-            </div>
-            <!-- /.widget -->
-            <div class="widget">
-              <h4 class="widget-title mb-3">Tags</h4>
-              <ul class="list-unstyled tag-list">
-                <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Still Life</a></li>
-                <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Urban</a></li>
-                <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Nature</a></li>
-                <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Landscape</a></li>
-                <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Macro</a></li>
-                <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Fun</a></li>
-                <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Workshop</a></li>
-                <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Photography</a></li>
-              </ul>
-            </div>
-            <!-- /.widget -->
-            <div class="widget">
-              <h4 class="widget-title mb-3">Archive</h4>
-              <ul class="unordered-list bullet-primary text-reset">
-                <li><a href="#">February 2019</a></li>
-                <li><a href="#">January 2019</a></li>
-                <li><a href="#">December 2018</a></li>
-                <li><a href="#">November 2018</a></li>
-                <li><a href="#">October 2018</a></li>
-              </ul>
-            </div>
-            <!-- /.widget -->
-          </aside>
-          <!-- /column -->
+                  <!-- /.post-content -->
+                </div>
+                <!--/.card-body -->
+                <div class="card-footer">
+                  <ul class="post-meta d-flex mb-0">
+                    <li class="post-date"><i class="uil uil-calendar-alt"></i><span>26 Feb 2022</span></li>
+                    <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>6</a></li>
+                    <li class="post-likes ms-auto"><a href="#"><i class="uil uil-heart-alt"></i>3</a></li>
+                  </ul>
+                  <!-- /.post-meta -->
+                </div>
+                <!-- /.card-footer -->
+              </div>
+              <!-- /.card -->
+            </article>
+            <!-- /.post -->
+            <article class="item post col-md-6">
+              <div class="card">
+                <figure class="card-img-top overlay overlay-1 hover-scale"><a href="#"> <img
+                      src="../static/assets/img/photos/b7.jpg" alt="" /></a>
+                  <figcaption>
+                    <h5 class="from-top mb-0">Read More</h5>
+                  </figcaption>
+                </figure>
+                <div class="card-body">
+                  <div class="post-header">
+                    <div class="post-category text-line">
+                      <a href="#" class="hover" rel="category">Business Tips</a>
+                    </div>
+                    <!-- /.post-category -->
+                    <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Morbi leo risus
+                        porta eget</a></h2>
+                  </div>
+                  <div class="post-content">
+                    <p>Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras
+                      imperdiet nun eu dolor. Aenean lacinia bibendum nulla sed.</p>
+                  </div>
+                  <!-- /.post-content -->
+                </div>
+                <!--/.card-body -->
+                <div class="card-footer">
+                  <ul class="post-meta d-flex mb-0">
+                    <li class="post-date"><i class="uil uil-calendar-alt"></i><span>7 Jan 2022</span></li>
+                    <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>2</a></li>
+                    <li class="post-likes ms-auto"><a href="#"><i class="uil uil-heart-alt"></i>5</a></li>
+                  </ul>
+                  <!-- /.post-meta -->
+                </div>
+                <!-- /.card-footer -->
+              </div>
+              <!-- /.card -->
+            </article>
+            <!-- /.post -->
+          </div>
+          <!-- /.row -->
         </div>
-        <!-- /.row -->
+        <!-- /.blog -->
+        <nav class="d-flex" aria-label="pagination">
+          <ul class="pagination">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true"><i class="uil uil-arrow-left"></i></span>
+              </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true"><i class="uil uil-arrow-right"></i></span>
+              </a>
+            </li>
+          </ul>
+          <!-- /.pagination -->
+        </nav>
+        <!-- /nav -->
       </div>
-      <!-- /.container -->
-    </section>
-    <!-- /section -->
+      <aside class="col-lg-4 sidebar ">
+        <div class="widget">
+          <form class="search-form">
+            <div class="form-floating mb-0">
+              <input id="search-form" type="text" class="form-control" placeholder="Search">
+              <label for="search-form">Search</label>
+            </div>
+          </form>
+          <!-- /.search-form -->
+        </div>
+        <div class="widget">
+          <h4 class="widget-title mb-3">Popular Posts</h4>
+          <ul class="image-list">
+            <li>
+              <figure class="rounded"><a href="./blog-post.html"><img src="../static/assets/img/photos/a1.jpg"
+                    alt=""></a></figure>
+              <div class="post-content">
+                <h6 class="mb-2"> <a class="link-dark" href="./blog-post.html">Magna Mollis Ultricies</a> </h6>
+                <ul class="post-meta">
+                  <li class="post-date"><i class="uil uil-calendar-alt"></i><span>26 Mar 2022</span></li>
+                  <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>3</a></li>
+                </ul>
+                <!-- /.post-meta -->
+              </div>
+            </li>
+            <li>
+              <figure class="rounded"> <a href="./blog-post.html"><img src="../static/assets/img/photos/a2.jpg"
+                    alt=""></a></figure>
+              <div class="post-content">
+                <h6 class="mb-2"> <a class="link-dark" href="./blog-post.html">Ornare Nullam Risus</a> </h6>
+                <ul class="post-meta">
+                  <li class="post-date"><i class="uil uil-calendar-alt"></i><span>16 Feb 2022</span></li>
+                  <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>6</a></li>
+                </ul>
+                <!-- /.post-meta -->
+              </div>
+            </li>
+            <li>
+              <figure class="rounded"><a href="./blog-post.html"><img src="../static/assets/img/photos/a3.jpg"
+                    alt=""></a></figure>
+              <div class="post-content">
+                <h6 class="mb-2"> <a class="link-dark" href="./blog-post.html">Euismod Nullam Fusce</a> </h6>
+                <ul class="post-meta">
+                  <li class="post-date"><i class="uil uil-calendar-alt"></i><span>8 Jan 2022</span></li>
+                  <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>5</a></li>
+                </ul>
+                <!-- /.post-meta -->
+              </div>
+            </li>
+          </ul>
+          <!-- /.image-list -->
+        </div>
+        <!-- /.widget -->
+        <div class="widget">
+          <h4 class="widget-title mb-3">Categories</h4>
+          <ul class="unordered-list bullet-primary text-reset">
+            <li><a href="#">Teamwork (21)</a></li>
+            <li><a href="#">Ideas (19)</a></li>
+            <li><a href="#">Workspace (16)</a></li>
+            <li><a href="#">Coding (7)</a></li>
+            <li><a href="#">Meeting (12)</a></li>
+            <li><a href="#">Business Tips (14)</a></li>
+          </ul>
+        </div>
+        <!-- /.widget -->
+        <div class="widget">
+          <h4 class="widget-title mb-3">Tags</h4>
+          <ul class="list-unstyled tag-list">
+            <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Still Life</a></li>
+            <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Urban</a></li>
+            <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Nature</a></li>
+            <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Landscape</a></li>
+            <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Macro</a></li>
+            <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Fun</a></li>
+            <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Workshop</a></li>
+            <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Photography</a></li>
+          </ul>
+        </div>
+        <!-- /.widget -->
+        <div class="widget">
+          <h4 class="widget-title mb-3">Archive</h4>
+          <ul class="unordered-list bullet-primary text-reset">
+            <li><a href="#">February 2019</a></li>
+            <li><a href="#">January 2019</a></li>
+            <li><a href="#">December 2018</a></li>
+            <li><a href="#">November 2018</a></li>
+            <li><a href="#">October 2018</a></li>
+          </ul>
+        </div>
+        <!-- /.widget -->
+      </aside>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
   </div>
+  <!-- /.container -->
+</section>
+{% elif all_blogs and blogs_section and blogs_section.show is True %}
+{% include 'include/blogs.html' %}
+{% elif not all_blogs and blogs_section and blogs_section.show is True %}
+<section class="section-frame overflow-hidden m-0">
+  <div class="wrapper bg-gray">
+    <div class="py-13  text-center">
+      <div class="row">
+        <div class="col-lg-10 col-xxl-8 mx-auto">
+          <h1 class="display-1 mb-4">Our Blog</h1>
+          <p class="lead fs-lg mb-0">Stay updated with the latest insights, tips, and trends in web development, design,
+            and freelancing. Our blog covers everything from technical guides to industry best practices, helping you
+            learn and grow in the digital world.</p>
+
+        </div>
+        <!-- /column -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.wrapper -->
+</section>
+
+<section class="wrapper bg-light">
+  <div class="container pb-1 pb-md-16 pt-8">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+
+        <!-- /.blog -->
+        <div class="blog grid grid-view">
+          <div class="row isotope gx-md-8 gy-8 mb-8">
+            <article class="item post col-md-6">
+              <div class="card">
+                <figure class="card-img-top overlay overlay-1 hover-scale"><a href="#"> <img
+                      src="../static/assets/img/photos/b4.jpg" alt="" /></a>
+                  <figcaption>
+                    <h5 class="from-top mb-0">Read More</h5>
+                  </figcaption>
+                </figure>
+                <div class="card-body">
+                  <div class="post-header">
+                    <div class="post-category text-line">
+                      <a href="#" class="hover" rel="category">Coding</a>
+                    </div>
+                    <!-- /.post-category -->
+                    <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Ligula tristique
+                        quis risus</a></h2>
+                  </div>
+                  <!-- /.post-header -->
+                  <div class="post-content">
+                    <p>Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras
+                      imperdiet nun eu dolor. Aenean lacinia bibendum nulla sed.</p>
+                  </div>
+                  <!-- /.post-content -->
+                </div>
+                <!--/.card-body -->
+                <div class="card-footer">
+                  <ul class="post-meta d-flex mb-0">
+                    <li class="post-date"><i class="uil uil-calendar-alt"></i><span>14 Apr 2022</span></li>
+                    <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>4</a></li>
+                    <li class="post-likes ms-auto"><a href="#"><i class="uil uil-heart-alt"></i>5</a></li>
+                  </ul>
+                  <!-- /.post-meta -->
+                </div>
+                <!-- /.card-footer -->
+              </div>
+              <!-- /.card -->
+            </article>
+            <!-- /.post -->
+            <article class="item post col-md-6">
+              <div class="card">
+                <figure class="card-img-top overlay overlay-1 hover-scale"><a href="#"> <img
+                      src="../static/assets/img/photos/b5.jpg" alt="" /></a>
+                  <figcaption>
+                    <h5 class="from-top mb-0">Read More</h5>
+                  </figcaption>
+                </figure>
+                <div class="card-body">
+                  <div class="post-header">
+                    <div class="post-category text-line">
+                      <a href="#" class="hover" rel="category">Workspace</a>
+                    </div>
+                    <!-- /.post-category -->
+                    <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Nullam id dolor
+                        elit id nibh</a></h2>
+                  </div>
+                  <!-- /.post-header -->
+                  <div class="post-content">
+                    <p>Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras
+                      imperdiet nun eu dolor. Aenean lacinia bibendum nulla sed.</p>
+                  </div>
+                  <!-- /.post-content -->
+                </div>
+                <!--/.card-body -->
+                <div class="card-footer">
+                  <ul class="post-meta d-flex mb-0">
+                    <li class="post-date"><i class="uil uil-calendar-alt"></i><span>29 Mar 2022</span></li>
+                    <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>3</a></li>
+                    <li class="post-likes ms-auto"><a href="#"><i class="uil uil-heart-alt"></i>3</a></li>
+                  </ul>
+                  <!-- /.post-meta -->
+                </div>
+                <!-- /.card-footer -->
+              </div>
+              <!-- /.card -->
+            </article>
+            <!-- /.post -->
+            <article class="item post col-md-6">
+              <div class="card">
+                <figure class="card-img-top overlay overlay-1 hover-scale"><a href="#"> <img
+                      src="../static/assets/img/photos/b6.jpg" alt="" /></a>
+                  <figcaption>
+                    <h5 class="from-top mb-0">Read More</h5>
+                  </figcaption>
+                </figure>
+                <div class="card-body">
+                  <div class="post-header">
+                    <div class="post-category text-line">
+                      <a href="#" class="hover" rel="category">Meeting</a>
+                    </div>
+                    <!-- /.post-category -->
+                    <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Ultricies fusce
+                        porta elit</a></h2>
+                  </div>
+                  <!-- /.post-header -->
+                  <div class="post-content">
+                    <p>Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras
+                      imperdiet nun eu dolor. Aenean lacinia bibendum nulla sed.</p>
+                  </div>
+                  <!-- /.post-content -->
+                </div>
+                <!--/.card-body -->
+                <div class="card-footer">
+                  <ul class="post-meta d-flex mb-0">
+                    <li class="post-date"><i class="uil uil-calendar-alt"></i><span>26 Feb 2022</span></li>
+                    <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>6</a></li>
+                    <li class="post-likes ms-auto"><a href="#"><i class="uil uil-heart-alt"></i>3</a></li>
+                  </ul>
+                  <!-- /.post-meta -->
+                </div>
+                <!-- /.card-footer -->
+              </div>
+              <!-- /.card -->
+            </article>
+            <!-- /.post -->
+            <article class="item post col-md-6">
+              <div class="card">
+                <figure class="card-img-top overlay overlay-1 hover-scale"><a href="#"> <img
+                      src="../static/assets/img/photos/b7.jpg" alt="" /></a>
+                  <figcaption>
+                    <h5 class="from-top mb-0">Read More</h5>
+                  </figcaption>
+                </figure>
+                <div class="card-body">
+                  <div class="post-header">
+                    <div class="post-category text-line">
+                      <a href="#" class="hover" rel="category">Business Tips</a>
+                    </div>
+                    <!-- /.post-category -->
+                    <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Morbi leo risus
+                        porta eget</a></h2>
+                  </div>
+                  <div class="post-content">
+                    <p>Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras
+                      imperdiet nun eu dolor. Aenean lacinia bibendum nulla sed.</p>
+                  </div>
+                  <!-- /.post-content -->
+                </div>
+                <!--/.card-body -->
+                <div class="card-footer">
+                  <ul class="post-meta d-flex mb-0">
+                    <li class="post-date"><i class="uil uil-calendar-alt"></i><span>7 Jan 2022</span></li>
+                    <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>2</a></li>
+                    <li class="post-likes ms-auto"><a href="#"><i class="uil uil-heart-alt"></i>5</a></li>
+                  </ul>
+                  <!-- /.post-meta -->
+                </div>
+                <!-- /.card-footer -->
+              </div>
+              <!-- /.card -->
+            </article>
+            <!-- /.post -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.blog -->
+        <nav class="d-flex" aria-label="pagination">
+          <ul class="pagination">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true"><i class="uil uil-arrow-left"></i></span>
+              </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true"><i class="uil uil-arrow-right"></i></span>
+              </a>
+            </li>
+          </ul>
+          <!-- /.pagination -->
+        </nav>
+        <!-- /nav -->
+      </div>
+      <aside class="col-lg-4 sidebar ">
+        <div class="widget">
+          <form class="search-form">
+            <div class="form-floating mb-0">
+              <input id="search-form" type="text" class="form-control" placeholder="Search">
+              <label for="search-form">Search</label>
+            </div>
+          </form>
+          <!-- /.search-form -->
+        </div>
+        <div class="widget">
+          <h4 class="widget-title mb-3">Popular Posts</h4>
+          <ul class="image-list">
+            <li>
+              <figure class="rounded"><a href="./blog-post.html"><img src="../static/assets/img/photos/a1.jpg"
+                    alt=""></a></figure>
+              <div class="post-content">
+                <h6 class="mb-2"> <a class="link-dark" href="./blog-post.html">Magna Mollis Ultricies</a> </h6>
+                <ul class="post-meta">
+                  <li class="post-date"><i class="uil uil-calendar-alt"></i><span>26 Mar 2022</span></li>
+                  <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>3</a></li>
+                </ul>
+                <!-- /.post-meta -->
+              </div>
+            </li>
+            <li>
+              <figure class="rounded"> <a href="./blog-post.html"><img src="../static/assets/img/photos/a2.jpg"
+                    alt=""></a></figure>
+              <div class="post-content">
+                <h6 class="mb-2"> <a class="link-dark" href="./blog-post.html">Ornare Nullam Risus</a> </h6>
+                <ul class="post-meta">
+                  <li class="post-date"><i class="uil uil-calendar-alt"></i><span>16 Feb 2022</span></li>
+                  <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>6</a></li>
+                </ul>
+                <!-- /.post-meta -->
+              </div>
+            </li>
+            <li>
+              <figure class="rounded"><a href="./blog-post.html"><img src="../static/assets/img/photos/a3.jpg"
+                    alt=""></a></figure>
+              <div class="post-content">
+                <h6 class="mb-2"> <a class="link-dark" href="./blog-post.html">Euismod Nullam Fusce</a> </h6>
+                <ul class="post-meta">
+                  <li class="post-date"><i class="uil uil-calendar-alt"></i><span>8 Jan 2022</span></li>
+                  <li class="post-comments"><a href="#"><i class="uil uil-comment"></i>5</a></li>
+                </ul>
+                <!-- /.post-meta -->
+              </div>
+            </li>
+          </ul>
+          <!-- /.image-list -->
+        </div>
+        <!-- /.widget -->
+        <div class="widget">
+          <h4 class="widget-title mb-3">Categories</h4>
+          <ul class="unordered-list bullet-primary text-reset">
+            <li><a href="#">Teamwork (21)</a></li>
+            <li><a href="#">Ideas (19)</a></li>
+            <li><a href="#">Workspace (16)</a></li>
+            <li><a href="#">Coding (7)</a></li>
+            <li><a href="#">Meeting (12)</a></li>
+            <li><a href="#">Business Tips (14)</a></li>
+          </ul>
+        </div>
+        <!-- /.widget -->
+        <div class="widget">
+          <h4 class="widget-title mb-3">Tags</h4>
+          <ul class="list-unstyled tag-list">
+            <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Still Life</a></li>
+            <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Urban</a></li>
+            <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Nature</a></li>
+            <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Landscape</a></li>
+            <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Macro</a></li>
+            <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Fun</a></li>
+            <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Workshop</a></li>
+            <li><a href="#" class="btn btn-soft-ash btn-sm rounded-pill">Photography</a></li>
+          </ul>
+        </div>
+        <!-- /.widget -->
+        <div class="widget">
+          <h4 class="widget-title mb-3">Archive</h4>
+          <ul class="unordered-list bullet-primary text-reset">
+            <li><a href="#">February 2019</a></li>
+            <li><a href="#">January 2019</a></li>
+            <li><a href="#">December 2018</a></li>
+            <li><a href="#">November 2018</a></li>
+            <li><a href="#">October 2018</a></li>
+          </ul>
+        </div>
+        <!-- /.widget -->
+      </aside>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+{% endif %}
+
+<!-- /section -->
+</div>
 {% endblock content %}
