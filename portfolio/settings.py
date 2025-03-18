@@ -33,6 +33,7 @@ INSTALLED_APPS = [
 
     # Modules
     'ckeditor',
+    'django_elasticsearch_dsl',
 ]
 
 CKEDITOR_UPLOAD_PATH = 'uploads/ckeditor/'
@@ -92,6 +93,12 @@ DATABASES = {
     }
 }
 
+ELASTICSEARCH_DSL = {
+    'default': {
+        'hosts': 'http://localhost:9200',
+        'timeout': 30,  # Increase timeout
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

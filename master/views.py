@@ -12,6 +12,8 @@ from projects.models import *
 
 from django.db.models import Q
 from django.core.paginator import Paginator
+from master . documents import *
+
 
 
 # def get_client_ip(request):
@@ -129,7 +131,7 @@ def blogsPage(request):
     elif tags_id:
         blogs   = Blog.objects.filter(tags__slug=tags_id).order_by('-id')
     elif keyword:
-        blogs   = Blog.objects.order_by('-date').filter(Q(category__name__icontains = keyword) | Q(title__icontains=keyword) | Q(short_description__icontains=keyword))
+        blogs = BlogDocument.search().query("match", title=keyword)
     else:
         blogs = Blog.objects.all().order_by('-id')
     
